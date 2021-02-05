@@ -11,3 +11,4 @@ The other files are just small snippets of code I used to learn :).
 
 Here's an example of the program in action (run with python .\detect_mask_image.py --image beautiful.jpg)
 
+![alt text](https://github.com/IvanAndrushka/Face-and-mask-detection/blob/Master/mask_detected.png?raw=true)
