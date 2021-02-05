@@ -6,11 +6,10 @@ import numpy as np
 import argparse
 import cv2
 import os
-#from mtcnn.mtcnn import MTCNN
+from mtcnn.mtcnn import MTCNN
 import imutils
 from imutils.video import VideoStream
 import time
-from facenet_pytorch import MTCNN
 
 
 def detect_and_predict_mask(frame, faceNet, maskNet):
@@ -72,7 +71,7 @@ args = vars(ap.parse_args())
 #prototxtPath = os.path.sep.join([args["face"], "deploy.prototxt"])
 #weightsPath = os.path.sep.join([args["face"], "res10_300x300_ssd_iter_140000.caffemodel"])
 #net = cv2.dnn.readNet(prototxtPath, weightsPath)
-faceNet = MTCNN()
+faceNet = MTCNN(select_largest=False, device='cuda')
 
 # define our extractor
 # faceNet = MTCNN(

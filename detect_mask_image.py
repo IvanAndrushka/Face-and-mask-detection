@@ -69,6 +69,11 @@ for i in range(0, len(detections)):
 		cv2.putText(image, label, (startX, startY - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
 		cv2.rectangle(image, (startX, startY), (endX, endY), color, 2)
 # show the output image
-cv2.imshow("Output", image)
+scale_percent = 60 # percent of original size
+width = int(image.shape[1] * scale_percent / 100)
+height = int(image.shape[0] * scale_percent / 100)
+dim = (width, height)
+resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
+cv2.imshow("Output", resized)
 cv2.waitKey(0)
   
