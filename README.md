@@ -8,3 +8,6 @@ The main files are:
 -detect_mask_video.py: does the same as the above but with a video. (the algorithm is pretty slow though, so you'll only get a few fps at most)
 
 The other files are just small snippets of code I used to learn :).
+
+Here's an example of the program in action (run with python .\detect_mask_image.py --image beautiful.jpg)
+
